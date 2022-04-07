@@ -53,3 +53,13 @@ def test_invalid_folder_with_files():
 def test_invalid_folder_with_folders():
     for invalid_scope in invalid_folders:
         assert check.isfolder(invalid_scope) is False
+
+# testa existencia de paths
+def test_valid_path():
+    for valid_scope in valid_paths:
+        assert check.exists(valid_scope) is True
+
+# testa inexistencia de paths
+def test_invalid_path():
+    for invalid_scope in invalid_paths:
+        assert check.exists(invalid_scope) is False
