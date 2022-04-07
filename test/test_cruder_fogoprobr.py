@@ -38,3 +38,18 @@ def test_invalid_file_with_folders():
 def test_invalid_file_with_files():
     for invalid_scope in invalid_files:
         assert check.isfile(invalid_scope) is False
+
+# testa pastas validas
+def test_valid_folder():
+    for valid_scope in valid_folders:
+        assert check.isfolder(valid_scope) is True
+
+# testa arquivos validos como pastas invalidsos
+def test_invalid_folder_with_files():
+    for invalid_scope in valid_files:
+        assert check.isfolder(invalid_scope) is False
+
+# testa pastas invalidas
+def test_invalid_folder_with_folders():
+    for invalid_scope in invalid_folders:
+        assert check.isfolder(invalid_scope) is False
