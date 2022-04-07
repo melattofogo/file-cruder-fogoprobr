@@ -15,3 +15,17 @@ def isfolder(path):
     """
     isfolder = os.path.isdir(path)
     return isfolder
+
+def exists(path):
+    """
+    Verifica se um arquivo existe
+    e retorna notificacao
+    """
+    if os.path.exists(path):
+        print('Arquivo existente:')
+        print(path)
+        return True
+    else:
+        print('Arquivo não encontrado:')
+        print(path)
+        return False
