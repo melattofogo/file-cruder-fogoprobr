@@ -15,7 +15,7 @@ AUTHOR_EMAIL ='melatto.fogo@live.com'
 
 setup(
     name="file-cruder-fogoprobr",
-    version="1.0.0",
+    version="1.1.0",
     packages=find_packages(exclude=('test', 'config')),
     include_package_data=True,
     license="MIT",
