@@ -20,4 +20,21 @@ dependencies:
   - vs2015_runtime=14.29.30037=h902a5da_6
   - wheel=0.37.1=pyhd8ed1ab_0
   - xz=5.2.5=h62dcd97_1
+  - pip:
+    - argcomplete==1.12.3
+    - colorama==0.4.4
+    - commitizen==2.23.0
+    - commitizen-cz-fogoprobr==1.0.2
+    - decli==0.5.2
+    - jinja2==3.1.1
+    - markupsafe==2.1.1
+    - packaging==21.3
+    - prompt-toolkit==3.0.29
+    - pyparsing==3.0.7
+    - pyyaml==6.0
+    - questionary==1.10.0
+    - termcolor==1.1.0
+    - tomlkit==0.10.1
+    - typing-extensions==4.1.1
+    - wcwidth==0.2.5
 prefix: C:\Users\joao.fogo\.conda\envs\pypi_env
