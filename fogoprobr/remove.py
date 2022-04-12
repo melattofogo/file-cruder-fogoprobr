@@ -41,3 +41,35 @@ def dir(directory, file_path):
     else:
         print("Pasta '% s' não existe" % directory)
         return False
+
+def patch(path, row):
+    """
+    Signature:
+    ----------
+    remove.patch(
+        path: 'str',
+        row: 'int'
+    )
+
+    Docstring:
+    ----------
+    remove a linha 'row' do arquivo 'path'
+    
+    Parameters:
+    ----------
+    path: caminho para o arquivo
+    row: numero da linha removida
+    """
+    if check.isfile(path):
+        file = open(path, 'r')
+        lines = file.readlines()
+        if 0 < row and row <= len(lines):
+            lines.pop(row-1)
+        else:
+            raise Exception('Row out of range')
+        file.close()
+        file = open(path, 'w')
+        file.writelines(lines)
+        file.close()
+    else:
+        raise Exception('Invalid file path')
