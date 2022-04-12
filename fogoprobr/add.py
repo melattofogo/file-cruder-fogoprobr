@@ -40,3 +40,42 @@ def dir(directory, file_path):
     else:
         print("Pasta '% s' já existe" % directory)
         return False
+
+def patch(path, row, str = '\n'):
+    """
+    Signature:
+    ----------
+    add.patch(
+        path: 'str',
+        row: 'int',
+        str: 'str' = '\n'
+    )
+
+    Docstring:
+    ----------
+    adiciona 'str' na linha 'row' do arquivo 'path'
+    
+    Parameters:
+    ----------
+    path: caminho para o arquivo
+    row: numero da linha adicionada
+    str: string adicionada, default '\n'
+    """
+    if check.isfile(path):
+        file = open(path, 'r')
+        lines = file.readlines()
+        if ( 0 < row and row - 1 <= len(lines) ):
+            # (row range) or (last row)
+            if str[-1] != '\n':
+                str = str + '\n'
+            lines.insert(row-1, str)
+            #print(lines)
+        else:
+            raise Exception('Row out of range')
+        file.close()
+        file = open(path, 'w')
+        file.writelines(lines)
+        file.close()
+        return True
+    else:
+        raise Exception('Invalid file path')
