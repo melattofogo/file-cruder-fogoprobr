@@ -1,6 +1,6 @@
 .pytest_cache
 test/__pycache__
-fogoprobr/__pycache__
+filecruder_fogoprobr/__pycache__
 
 script.py
 

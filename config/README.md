@@ -48,9 +48,9 @@ Instalação do ```bumpversion```
 pip install bumpversion
 ```
 
-Atualização ```major``` (major, minor ou patch) da versão atual ```1.0.0``` nos arquivos ```setup.py``` e ```fogoprobr/__init__.py```
+Atualização ```major``` (major, minor ou patch) da versão atual ```1.0.0``` nos arquivos ```setup.py``` e ```filecruder_fogoprobr/__init__.py```
 ```
-bumpversion --current-version 1.0.0 major setup.py fogoprobr/__init__.py
+bumpversion --current-version 1.0.0 major setup.py filecruder_fogoprobr/__init__.py
 ```
 
 # publishing
