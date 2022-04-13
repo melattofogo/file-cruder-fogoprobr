@@ -53,6 +53,33 @@ Atualização ```major``` (major, minor ou patch) da versão atual ```1.0.0``` n
 bumpversion --current-version 1.0.0 major setup.py filecruder_fogoprobr/__init__.py
 ```
 
+## tag
+
+Cria ```tag``` *local*
+```
+git tag -a v.0.0.0 [commit-hash] -m "Release 0.0.0"
+```
+
+Push de tags locais para remote
+```
+git push --tags
+```
+
+Lista ```tag``` *local*
+```
+git tag -l
+```
+
+Deleta ```tag``` *local*
+```
+git tag -d v.0.0.0
+```
+
+Deleta ```tag``` em *remote*
+```
+git push --delete origin v.0.0.0
+```
+
 # publishing
 
 Instalação do ```twine```
