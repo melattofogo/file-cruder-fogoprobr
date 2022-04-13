@@ -65,6 +65,11 @@ Publish em ```test.pypi.org```
 twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
 
+Publish em ```pypi.org```
+```
+twine upload dist/*
+```
+
 ## building
 ```
 python setup.py sdist bdist_wheel
